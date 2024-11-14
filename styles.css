@@ -1,0 +1,219 @@
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+ 
+
+.container {
+
+    width: 100%;
+
+    padding: 20px;
+
+    font-family: Arial, sans-serif;
+
+}
+
+ 
+
+.gallery-heading {
+
+    text-align: center;
+
+    font-size: 2rem;
+
+    margin-bottom: 40px;
+
+}
+
+ 
+
+.gallery {
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 20px;
+
+    margin-top: 20px;
+
+}
+
+ 
+
+.gallery-item {
+
+    background-color: rgb(118, 170, 203);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    position: relative;
+
+    height: 200px;
+
+    overflow: hidden;
+
+}
+
+ 
+
+.gallery-item:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+
+}
+
+ 
+
+.gallery-item img {
+
+    width: 80%;
+
+    height: 80%;
+
+    object-fit: contain;
+
+    border-radius: 8px;
+
+}
+
+ 
+
+.image-title {
+
+    background-color: white;
+
+    padding: 10px;
+
+    text-align: center;
+
+    font-size: 1rem;
+
+    color: #333;
+
+    border-radius: 0 0 8px 8px;
+
+    width: 100%;
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    box-sizing: border-box;
+
+}
+
+ 
+
+@media (max-width: 600px) {
+
+    .gallery-heading {
+
+        font-size: 1.5rem;
+
+    }
+
+ 
+
+    .gallery {
+
+        grid-template-columns: 1fr;
+
+    }
+
+ 
+
+    .gallery-item {
+
+        height: 150px;
+
+    }
+
+ 
+
+    .gallery-item img {
+
+        height: 60%;
+
+    }
+
+}
+
+ 
+
+@media (min-width: 601px) and (max-width: 900px) {
+
+    .gallery-heading {
+
+        font-size: 1.8rem;
+
+    }
+
+ 
+
+    .gallery {
+
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+    }
+
+ 
+
+    .gallery-item {
+
+        height: auto;
+
+    }
+
+}
+
+ 
+
+@media (min-width: 901px) {
+
+    .gallery-heading {
+
+        font-size: 2.5rem;
+
+    }
+
+ 
+
+    .gallery {
+
+        grid-template-columns: repeat(5, 1fr);
+
+    }
+
+ 
+
+    .gallery-item {
+
+        height: 200px;
+
+    }
+
+}
